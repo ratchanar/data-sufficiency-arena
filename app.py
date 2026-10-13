@@ -169,15 +169,7 @@ if st.session_state.view == "Play":
         for col,val,label in [(c1,"30","Questions"),(c2,"30:00","Time limit"),(c3,"A–E","Answer choices")]:
             with col:
                 st.markdown(f'<div class="metric"><div class="value">{val}</div><div class="label">{label}</div></div>', unsafe_allow_html=True)
-        st.markdown('<div class="panel"><h3> Rules of the challenge</h3><p style="font-size:1.05rem">A: Statement 1 alone is sufficient, but Statement 2 alone is not.
-
-B: Statement 2 alone is sufficient, but Statement 1 alone is not.
-
-C: Both statements together are sufficient, but neither alone is sufficient.
-
-D: Each statement alone is sufficient.
-
-E: Even both statements together are insufficient. Choose A, B, C, D or E. You can move between questions; answers save as you go. Your score is posted to the live leaderboard when you submit.</p><p class="small-note">Ranking: highest score first; ties are broken by faster completion time.</p></div>', unsafe_allow_html=True)
+        st.markdown('<div class="panel"><h3> Rules of the challenge</h3><p style="font-size:1.05rem">A: Statement 1 alone is sufficient, but Statement 2 alone is not.B: Statement 2 alone is sufficient, but Statement 1 alone is not. C: Both statements together are sufficient, but neither alone is sufficient. D: Each statement alone is sufficient. E: Even both statements together are insufficient. Choose A, B, C, D or E. You can move between questions; answers save as you go. Your score is posted to the live leaderboard when you submit.</p><p class="small-note">Ranking: highest score first; ties are broken by faster completion time.</p></div>', unsafe_allow_html=True)
         with st.form("join_game"):
             name = st.text_input("Your name (or pair name)", placeholder="Use a unique name so your score is easy to identify")
             room = st.text_input("Classroom code", value=DEFAULT_ROOM, help="Everyone must use the same classroom code.")
