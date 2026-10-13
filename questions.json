@@ -1,0 +1,311 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "topic": "Algebra",
+      "level": "Easy",
+      "q": "What is the value of x?",
+      "s1": "x + 7 = 15",
+      "s2": "3x = 24",
+      "answer": "D",
+      "why": "Statement (1) gives x = 8. Statement (2) also gives x = 8. Each statement alone is sufficient."
+    },
+    {
+      "id": 2,
+      "topic": "Divisibility",
+      "level": "Easy",
+      "q": "Is the integer n divisible by 6?",
+      "s1": "n is divisible by 2.",
+      "s2": "n is divisible by 3.",
+      "answer": "C",
+      "why": "Divisibility by 2 alone or 3 alone is insufficient. Together, an integer divisible by both 2 and 3 is divisible by 6."
+    },
+    {
+      "id": 3,
+      "topic": "Algebra",
+      "level": "Easy",
+      "q": "What is the value of y?",
+      "s1": "y − 4 = 9.",
+      "s2": "2y = 26.",
+      "answer": "D",
+      "why": "Statement (1) gives y = 13. Statement (2) also gives y = 13. Each alone is sufficient."
+    },
+    {
+      "id": 4,
+      "topic": "Signs and inequalities",
+      "level": "Easy",
+      "q": "Is x positive?",
+      "s1": "x² = 16.",
+      "s2": "x = −4.",
+      "answer": "B",
+      "why": "Statement (1) permits x = 4 or x = −4, so the sign is uncertain. Statement (2) establishes that x is negative, so the answer is definitely NO."
+    },
+    {
+      "id": 5,
+      "topic": "Business arithmetic",
+      "level": "Easy",
+      "q": "What is the total number of employees in Departments A and B?",
+      "s1": "Department A has 28 employees.",
+      "s2": "Department B has 37 employees.",
+      "answer": "C",
+      "why": "Each statement gives only one department’s count. Together, the total is 28 + 37 = 65."
+    },
+    {
+      "id": 6,
+      "topic": "Ratios",
+      "level": "Moderate",
+      "q": "What is the value of a?",
+      "s1": "a : b = 3 : 5.",
+      "s2": "a + b = 40.",
+      "answer": "C",
+      "why": "The ratio alone and the total alone are insufficient. Together, 8 ratio parts = 40, so one part is 5 and a = 3 × 5 = 15."
+    },
+    {
+      "id": 7,
+      "topic": "Profit and loss",
+      "level": "Moderate",
+      "q": "Is the selling price greater than ₹1,000?",
+      "s1": "The cost price is ₹800.",
+      "s2": "The profit is 30% of the cost price.",
+      "answer": "C",
+      "why": "Cost price alone does not determine selling price; profit percentage alone does not give the amount. Together, profit = ₹240 and selling price = ₹1,040, so YES."
+    },
+    {
+      "id": 8,
+      "topic": "Averages",
+      "level": "Moderate",
+      "q": "Is the average of four numbers greater than 12?",
+      "s1": "The sum of the four numbers is 52.",
+      "s2": "One of the numbers is 20.",
+      "answer": "A",
+      "why": "Statement (1) gives an average of 52 ÷ 4 = 13, which is greater than 12. Statement (2) alone leaves the other three values unknown."
+    },
+    {
+      "id": 9,
+      "topic": "Integers",
+      "level": "Moderate",
+      "q": "What is the integer n?",
+      "s1": "n is even.",
+      "s2": "15 < n < 17.",
+      "answer": "B",
+      "why": "Statement (1) allows many even integers. Statement (2) gives n = 16 only, so Statement (2) alone is sufficient."
+    },
+    {
+      "id": 10,
+      "topic": "Fractions and inequalities",
+      "level": "Moderate",
+      "q": "Is a/b > 1?",
+      "s1": "a > b.",
+      "s2": "b > 0.",
+      "answer": "C",
+      "why": "Statement (1) alone does not fix the ratio; Statement (2) alone does not constrain a. Together, a > b > 0, so a/b > 1."
+    },
+    {
+      "id": 11,
+      "topic": "Algebra",
+      "level": "Moderate",
+      "q": "What is the value of x?",
+      "s1": "x + y = 18.",
+      "s2": "y = 11.",
+      "answer": "C",
+      "why": "Statement (1) leaves many possible pairs; Statement (2) gives y but not x. Together, x + 11 = 18, so x = 7."
+    },
+    {
+      "id": 12,
+      "topic": "Business arithmetic",
+      "level": "Moderate",
+      "q": "Did the business make a profit?",
+      "s1": "Revenue was ₹3,20,000.",
+      "s2": "Total expenses were ₹2,75,000.",
+      "answer": "C",
+      "why": "Revenue alone and expenses alone are insufficient. Together, profit = ₹3,20,000 − ₹2,75,000 = ₹45,000, so YES."
+    },
+    {
+      "id": 13,
+      "topic": "Algebra",
+      "level": "Difficult",
+      "q": "Is x = 6?",
+      "s1": "x² = 36.",
+      "s2": "x > 0.",
+      "answer": "C",
+      "why": "Statement (1) allows x = 6 or −6. Statement (2) allows many positive values. Together, x² = 36 and x > 0 imply x = 6."
+    },
+    {
+      "id": 14,
+      "topic": "Divisibility",
+      "level": "Difficult",
+      "q": "Is the integer n divisible by 12?",
+      "s1": "n is divisible by 3.",
+      "s2": "n is divisible by 4.",
+      "answer": "C",
+      "why": "Divisibility by 3 alone or 4 alone is insufficient. Together, an integer divisible by both 3 and 4 is divisible by 12."
+    },
+    {
+      "id": 15,
+      "topic": "Inequalities",
+      "level": "Difficult",
+      "q": "Is x > 10?",
+      "s1": "x > 7.",
+      "s2": "x > 13.",
+      "answer": "B",
+      "why": "Statement (1) allows x = 8 (NO) and x = 11 (YES). Statement (2) guarantees x > 10, so it is sufficient."
+    },
+    {
+      "id": 16,
+      "topic": "Algebra",
+      "level": "Difficult",
+      "q": "What is the value of x?",
+      "s1": "x + y = 12.",
+      "s2": "2x + 2y = 24.",
+      "answer": "E",
+      "why": "Both statements express the same equation x + y = 12. Many values of x are possible, so even together they are insufficient."
+    },
+    {
+      "id": 17,
+      "topic": "Signs and powers",
+      "level": "Difficult",
+      "q": "Is x positive?",
+      "s1": "x² = 25.",
+      "s2": "x³ = 125.",
+      "answer": "B",
+      "why": "Statement (1) permits x = 5 or −5. Statement (2) gives x = 5, which is positive."
+    },
+    {
+      "id": 18,
+      "topic": "Integers",
+      "level": "Difficult",
+      "q": "Is the integer n odd?",
+      "s1": "n² is odd.",
+      "s2": "n is not divisible by 2.",
+      "answer": "D",
+      "why": "If n² is odd, n must be odd. An integer not divisible by 2 is also odd. Each statement alone is sufficient."
+    },
+    {
+      "id": 19,
+      "topic": "Averages",
+      "level": "Difficult",
+      "q": "Is the average of five numbers greater than 20?",
+      "s1": "Their sum is 105.",
+      "s2": "Each number is greater than 10.",
+      "answer": "A",
+      "why": "Statement (1) gives an average of 105 ÷ 5 = 21, so YES. Statement (2) alone does not guarantee an average greater than 20."
+    },
+    {
+      "id": 20,
+      "topic": "Inequalities",
+      "level": "Difficult",
+      "q": "Is x < y?",
+      "s1": "x + 3 < y + 3.",
+      "s2": "2x < 2y.",
+      "answer": "D",
+      "why": "Subtracting 3 in Statement (1) gives x < y. Dividing Statement (2) by positive 2 also gives x < y. Each alone is sufficient."
+    },
+    {
+      "id": 21,
+      "topic": "Speed, distance and time",
+      "level": "Moderate",
+      "q": "What distance does a vehicle travel?",
+      "s1": "Its constant speed is 60 km/h.",
+      "s2": "It travels for 2.5 hours at that constant speed.",
+      "answer": "C",
+      "why": "Statement (1) alone lacks time; Statement (2) alone lacks speed. Together, distance = speed × time = 60 × 2.5 = 150 km."
+    },
+    {
+      "id": 22,
+      "topic": "Work rates",
+      "level": "Moderate",
+      "q": "How many days will Ravi take to complete a job alone?",
+      "s1": "Ravi and Sam together complete the job in 6 days.",
+      "s2": "Sam alone completes the job in 15 days.",
+      "answer": "C",
+      "why": "Together, their rate is 1/6 job per day; Sam’s rate is 1/15. Ravi’s rate is 1/6 − 1/15 = 1/10, so Ravi takes 10 days."
+    },
+    {
+      "id": 23,
+      "topic": "Percentages",
+      "level": "Moderate",
+      "q": "What is the final price after a discount?",
+      "s1": "The marked price is ₹2,000.",
+      "s2": "The discount is 15% of the marked price.",
+      "answer": "C",
+      "why": "Together, discount = 15% × ₹2,000 = ₹300. Final price = ₹2,000 − ₹300 = ₹1,700. Neither statement alone is sufficient."
+    },
+    {
+      "id": 24,
+      "topic": "Algebra",
+      "level": "Moderate",
+      "q": "What is x?",
+      "s1": "x + y = 14.",
+      "s2": "y = 5.",
+      "answer": "C",
+      "why": "Neither statement alone determines x. Together, x + 5 = 14, so x = 9."
+    },
+    {
+      "id": 25,
+      "topic": "Venn diagrams and sets",
+      "level": "Moderate",
+      "q": "How many students study both French and German?",
+      "s1": "30 study French and 22 study German.",
+      "s2": "Of 50 students, 10 study neither language.",
+      "answer": "C",
+      "why": "Statement (2) gives 40 students in the union. Together, overlap = 30 + 22 − 40 = 12."
+    },
+    {
+      "id": 26,
+      "topic": "Verbal logic",
+      "level": "Moderate",
+      "q": "Is the conclusion “All managers are graduates” definitely true?",
+      "s1": "All department heads are graduates, and all managers are department heads.",
+      "s2": "No manager is a non-graduate.",
+      "answer": "D",
+      "why": "Statement (1) gives managers ⊆ department heads ⊆ graduates. Statement (2) directly says no manager is a non-graduate. Each alone establishes the conclusion."
+    },
+    {
+      "id": 27,
+      "topic": "Ratios",
+      "level": "Moderate",
+      "q": "What is x?",
+      "s1": "x : y = 4 : 7.",
+      "s2": "x + y = 33.",
+      "answer": "C",
+      "why": "Together, 11 ratio parts equal 33, so one part is 3 and x = 4 × 3 = 12."
+    },
+    {
+      "id": 28,
+      "topic": "Averages",
+      "level": "Moderate",
+      "q": "What is the average of five numbers?",
+      "s1": "Their sum is 85.",
+      "s2": "The average of the first four numbers is 16.",
+      "answer": "A",
+      "why": "Statement (1) gives the average as 85 ÷ 5 = 17. Statement (2) alone does not give the fifth number or the total."
+    },
+    {
+      "id": 29,
+      "topic": "Clocks and angles",
+      "level": "Moderate",
+      "q": "What is the smaller angle between the hour and minute hands at 3:00?",
+      "s1": "The minute hand points at 12 and the hour hand points at 3.",
+      "s2": "It is exactly 3:00 on a standard 12-hour clock.",
+      "answer": "D",
+      "why": "Statement (1) places the hands at 12 and 3, so the smaller angle is 90°. Statement (2) also fixes the time at 3:00, which gives a 90° angle. Each statement alone is sufficient."
+    },
+    {
+      "id": 30,
+      "topic": "Leap years",
+      "level": "Moderate",
+      "q": "Is the year a leap year?",
+      "s1": "The year is divisible by 4.",
+      "s2": "The year is 2000.",
+      "answer": "B",
+      "why": "Statement (1) alone is insufficient because century years must be divisible by 400. Statement (2) identifies 2000, which is divisible by 400, so it is a leap year."
+    }
+  ],
+  "choices": {
+    "A": "Statement (1) alone is sufficient, but Statement (2) alone is not.",
+    "B": "Statement (2) alone is sufficient, but Statement (1) alone is not.",
+    "C": "Both statements together are sufficient, but neither alone is sufficient.",
+    "D": "Each statement alone is sufficient.",
+    "E": "Even both statements together are insufficient."
+  }
+}
