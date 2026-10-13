@@ -72,7 +72,7 @@ def get_supabase():
     # Secrets are optional during local-only testing.
     try:
         url = st.secrets.get("SUPABASE_URL", os.getenv("SUPABASE_URL", ""))
-        key = st.secrets.get("SUPABASE_ANON_KEY"", os.getenv("SUPABASE_ANON_KEY", ""))
+        key = st.secrets.get("SUPABASE_ANON_KEY", os.getenv("SUPABASE_ANON_KEY", ""))
     except Exception:
         url = os.getenv("SUPABASE_URL", "")
         key = os.getenv("SUPABASE_ANON_KEY", "")
