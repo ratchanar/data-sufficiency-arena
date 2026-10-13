@@ -16,7 +16,7 @@ try:
 except ImportError:
     create_client = None
 
-st.set_page_config(page_title="Data Sufficiency Arena", page_icon="🧠", layout="wide", initial_sidebar_state="collapsed")
+st.set_page_config(page_title="Data Sufficiency Quiz", layout="wide", initial_sidebar_state="collapsed")
 
 DATA = json.loads((Path(__file__).parent / "questions.json").read_text(encoding="utf-8"))
 QUESTIONS = DATA["questions"]
@@ -147,7 +147,7 @@ if "view" not in st.session_state:
     st.session_state.view = "Play"
 st.markdown("""
 <div class="hero">
-  <div style="font-size:2.3rem">🧠 ⚡ 🏆</div>
+  <div style="font-size:2.3rem"></div>
   <h1>DATA SUFFICIENCY ARENA</h1>
   <p>30 questions · 30 minutes · Live classroom leaderboard</p>
 </div>
@@ -169,12 +169,12 @@ if st.session_state.view == "Play":
         for col,val,label in [(c1,"30","Questions"),(c2,"30:00","Time limit"),(c3,"A–E","Answer choices")]:
             with col:
                 st.markdown(f'<div class="metric"><div class="value">{val}</div><div class="label">{label}</div></div>', unsafe_allow_html=True)
-        st.markdown('<div class="panel"><h3>🚦 Rules of the challenge</h3><p style="font-size:1.05rem">Test Statement (1) alone, then Statement (2) alone. Combine them only if needed. Choose A, B, C, D or E. You can move between questions; answers save as you go. Your score is posted to the live leaderboard when you submit.</p><p class="small-note">Ranking: highest score first; ties are broken by faster completion time.</p></div>', unsafe_allow_html=True)
+        st.markdown('<div class="panel"><h3> Rules of the challenge</h3><p style="font-size:1.05rem">Test Statement (1) alone, then Statement (2) alone. Combine them only if needed. Choose A, B, C, D or E. You can move between questions; answers save as you go. Your score is posted to the live leaderboard when you submit.</p><p class="small-note">Ranking: highest score first; ties are broken by faster completion time.</p></div>', unsafe_allow_html=True)
         with st.form("join_game"):
             name = st.text_input("Your name (or pair name)", placeholder="Use a unique name so your score is easy to identify")
             room = st.text_input("Classroom code", value=DEFAULT_ROOM, help="Everyone must use the same classroom code.")
             confirm = st.checkbox("I am ready to start my 30-minute attempt.")
-            start = st.form_submit_button("🚀 JOIN & START", type="primary", use_container_width=True)
+            start = st.form_submit_button("JOIN & START", type="primary", use_container_width=True)
             if start:
                 if not name.strip():
                     st.error("Please enter your name or pair name.")
@@ -206,7 +206,7 @@ if st.session_state.view == "Play":
         mins,secs = divmod(remaining,60)
         answered = sum(1 for i in range(TOTAL) if st.session_state.game_answers.get(str(i)) in LETTERS)
         c1,c2,c3 = st.columns(3)
-        with c1: st.markdown(f'<div class="metric"><div class="value" style="font-size:1.45rem">👋 {st.session_state.game_name}</div><div class="label">Player / pair</div></div>',unsafe_allow_html=True)
+        with c1: st.markdown(f'<div class="metric"><div class="value" style="font-size:1.45rem"> {st.session_state.game_name}</div><div class="label">Player / pair</div></div>',unsafe_allow_html=True)
         with c2: st.markdown(f'<div class="metric"><div class="value" style="color:{"#f87171" if remaining<=300 else "#facc15"}">{mins:02d}:{secs:02d}</div><div class="label">Time remaining</div></div>',unsafe_allow_html=True)
         with c3: st.markdown(f'<div class="metric"><div class="value">{answered}/{TOTAL}</div><div class="label">Answered</div></div>',unsafe_allow_html=True)
         st.progress(answered/TOTAL, text=f"Progress: {answered} of {TOTAL} answered")
@@ -244,7 +244,7 @@ if st.session_state.view == "Play":
         record = st.session_state.game_record
         score = int(record["score"])
         pct = round(score/TOTAL*100)
-        st.markdown("## 🎉 Attempt submitted!")
+        st.markdown("## Attempt submitted!")
         c1,c2,c3 = st.columns(3)
         with c1: st.markdown(f'<div class="metric"><div class="value">{score}/{TOTAL}</div><div class="label">Your score</div></div>',unsafe_allow_html=True)
         with c2: st.markdown(f'<div class="metric"><div class="value">{pct}%</div><div class="label">Accuracy</div></div>',unsafe_allow_html=True)
@@ -252,7 +252,7 @@ if st.session_state.view == "Play":
         st.success("Your score has been submitted to the classroom leaderboard.")
         if st.session_state.get("auto_submitted",False):
             st.warning("Time expired; your answers were submitted automatically.")
-        if st.button("📊 View live leaderboard", type="primary", use_container_width=True):
+        if st.button("View live leaderboard", type="primary", use_container_width=True):
             st.session_state.view="Live leaderboard"; st.rerun()
         with st.expander("Review answers and explanations"):
             for i,q in enumerate(QUESTIONS):
@@ -294,7 +294,7 @@ elif st.session_state.view == "Live leaderboard":
     st.markdown('<p class="small-note">Ranking rule: score descending, then completion time ascending. Each player name appears once; a later better attempt replaces the previous result.</p>',unsafe_allow_html=True)
 
 else:
-    st.markdown("## 👩‍🏫 Teacher control panel")
+    st.markdown("## Teacher control panel")
     st.markdown('<div class="panel"><h3>Classroom setup</h3><p>Give every student the same room code. Keep the leaderboard open on the projector in a separate browser or device. Students open the app on their own phones/laptops, enter their names and the room code, and start.</p><p class="small-note">For true cross-device sharing, connect the app to Supabase using the setup instructions in README.md. Local SQLite is suitable only when everyone connects to the same running server.</p></div>',unsafe_allow_html=True)
     room = st.text_input("Room code", value=DEFAULT_ROOM).strip().upper()
     rows = fetch_results(sb, room)
