@@ -71,8 +71,8 @@ def local_db():
 def get_supabase():
     # Secrets are optional during local-only testing.
     try:
-        url = st.secrets.get("SUPABASE_URL", os.getenv("SUPABASE_URL", ""))
-        key = st.secrets.get("SUPABASE_ANON_KEY", os.getenv("SUPABASE_ANON_KEY", ""))
+        url = st.secrets.get("SUPABASE_URL = "https://rntpchlglomqmqoxmvja.supabase.co"", os.getenv("SUPABASE_URL", ""))
+        key = st.secrets.get("SUPABASE_ANON_KEY = "sb_publishable_XzxNAX46IdIVz4d8pJRSHg_CR7KHt96"", os.getenv("SUPABASE_ANON_KEY", ""))
     except Exception:
         url = os.getenv("SUPABASE_URL", "")
         key = os.getenv("SUPABASE_ANON_KEY", "")
