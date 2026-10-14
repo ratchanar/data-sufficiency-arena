@@ -166,14 +166,14 @@ with st.sidebar:
 if st.session_state.view == "Play":
     if not st.session_state.get("game_started", False):
         c1,c2,c3 = st.columns(3)
-        for col,val,label in [(c1,"30","Questions"),(c2,"30:00","Time limit"),(c3,"A–E","Answer choices")]:
+        for col,val,label in [(c1,"30","Questions"),(c2,"15:00","Time limit"),(c3,"A–E","Answer choices")]:
             with col:
                 st.markdown(f'<div class="metric"><div class="value">{val}</div><div class="label">{label}</div></div>', unsafe_allow_html=True)
         st.markdown('<div class="panel"><h3> Rules of the challenge</h3><p style="font-size:1.05rem">A: Statement 1 alone is sufficient, but Statement 2 alone is not. <p> B: Statement 2 alone is sufficient, but Statement 1 alone is not.  <p> C: Both statements together are sufficient, but neither alone is sufficient.  <p> D: Each statement alone is sufficient. <p> E: Even both statements together are insufficient.  <p> Choose A, B, C, D or E.  <p> You can move between questions; answers save as you go.  <p> Your score is posted to the live leaderboard when you submit.</p><p class="small-note">Ranking: Highest score first; Ties are broken by faster completion time.</p></div>', unsafe_allow_html=True)
         with st.form("join_game"):
             name = st.text_input("Your name (or pair name)", placeholder="Use a unique name so your score is easy to identify")
             room = st.text_input("Classroom code", value=DEFAULT_ROOM, help="Everyone must use the same classroom code.")
-            confirm = st.checkbox("I am ready to start my 30-minute attempt.")
+            confirm = st.checkbox("I am ready to start my 15-minute attempt.")
             start = st.form_submit_button("JOIN & START", type="primary", use_container_width=True)
             if start:
                 if not name.strip():
