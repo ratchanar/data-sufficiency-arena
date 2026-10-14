@@ -154,7 +154,7 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 with st.sidebar:
-    st.markdown("## 🎮 Game menu")
+    st.markdown("## Game menu")
     mode = st.radio("Choose a view", ["Play", "Live leaderboard", "Teacher control"], index=["Play","Live leaderboard","Teacher control"].index(st.session_state.view))
     st.session_state.view = mode
     st.markdown("---")
