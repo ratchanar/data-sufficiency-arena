@@ -23,7 +23,7 @@ QUESTIONS = DATA["questions"]
 CHOICES = DATA["choices"]
 LETTERS = list(CHOICES.keys())
 TOTAL = len(QUESTIONS)
-DURATION_SECONDS = 30 * 60
+DURATION_SECONDS = 15 * 60
 DEFAULT_ROOM = os.getenv("DSA_ROOM_CODE", "BBA_SCMS")
 
 st.markdown("""
@@ -149,7 +149,7 @@ st.markdown("""
 <div class="hero">
   <div style="font-size:2.3rem"></div>
   <h1>DATA SUFFICIENCY QUIZ</h1>
-  <p>30 questions · 30 minutes · Live classroom leaderboard</p>
+  <p>30 questions · 15 minutes · Live classroom leaderboard</p>
 </div>
 """, unsafe_allow_html=True)
 
