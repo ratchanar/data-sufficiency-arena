@@ -1,6 +1,6 @@
 # Data Sufficiency Arena — Live Leaderboard Edition
 
-A 30-question, 30-minute Streamlit quiz with a live classroom leaderboard.
+A 30-question, 15-minute Streamlit quiz with a live classroom leaderboard.
 
 ## What is new
 - Student/pair names and classroom room codes
@@ -8,7 +8,7 @@ A 30-question, 30-minute Streamlit quiz with a live classroom leaderboard.
 - Ranking by score (highest first), then faster completion time
 - Teacher control view
 - CSV export of the leaderboard
-- Auto-submit when 30 minutes expire
+- Auto-submit when 15 minutes expire
 - Supabase cloud database support for students on separate devices
 - Local SQLite fallback for testing on one running server
 
@@ -44,13 +44,13 @@ streamlit run app.py
 1. Push the project folder to a GitHub repository.
 2. Go to https://share.streamlit.io/ and deploy the repository.
 3. In the Streamlit app's **Settings / Secrets**, add the same three settings in TOML format.
-4. Share the deployed URL and the room code (default: `BBA30`) with students.
+4. Share the deployed URL and the room code (default: `BBASCMS`) with students.
 5. Open the same URL in another tab/device and select **Live leaderboard**. It refreshes every 5 seconds.
 
 ## How to play in class
 - Students individually or in pairs open the shared app URL.
 - Everyone uses the same room code but a distinct player/pair name.
-- Each attempt has a 30-minute timer beginning when that student clicks Join & Start.
+- Each attempt has a 15-minute timer beginning when that student clicks Join & Start.
 - Scores appear on the leaderboard after submission or automatic timeout.
 - Ties are broken by completion time.
 - The teacher can leave the leaderboard view projected.
