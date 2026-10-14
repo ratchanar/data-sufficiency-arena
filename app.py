@@ -202,7 +202,7 @@ if st.session_state.view == "Play":
             st.session_state.game_record = record
             st.session_state.auto_submitted = True
             st.rerun()
-        st_autorefresh(interval=1000, key="game_timer_refresh")
+        st_autorefresh(interval=15000, key="game_timer_refresh")
         mins,secs = divmod(remaining,60)
         answered = sum(1 for i in range(TOTAL) if st.session_state.game_answers.get(str(i)) in LETTERS)
         c1,c2,c3 = st.columns(3)
